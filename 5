@@ -1,0 +1,32 @@
+# solution.py
+
+def main():
+    try:
+        # Считываем числа из файла
+        with open('input.txt', 'r') as file:
+            lines = file.readlines()
+
+        if len(lines) < 3:
+            raise ValueError("Недостаточно данных")
+
+        a = int(lines[0].strip())
+        b = int(lines[1].strip())
+        c = int(lines[2].strip())
+
+        result = a / b + c
+
+        # Если результат целый — выводим как int, иначе как float
+        if result == int(result):
+            result = int(result)
+        
+    except ValueError:
+        result = "ValueError"
+    except ZeroDivisionError:
+        result = "ZeroDivisionError"
+
+    # Запись результата
+    with open('output.txt', 'w') as file:
+        file.write(str(result))
+
+if __name__ == "__main__":
+    main()
