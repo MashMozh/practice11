@@ -1,0 +1,5 @@
+with open('task3', 'r', encoding='utf-8') as infile:
+    lines = infile.readlines()
+result = ''.join([line.lstrip()[0] for line in lines if line.strip()])
+with open('output.txt', 'w', encoding='utf-8') as outfile:
+    outfile.write(result)
