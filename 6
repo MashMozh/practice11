@@ -1,0 +1,9 @@
+with open('task6', 'r') as infile:
+    lines = infile.readlines()
+    n = int(lines[0].strip())
+if n==len(lines)-1:
+    with open('output', 'w') as outfile:
+        outfile.write("YES")
+else:
+    with open('output', 'w') as outfile:
+        outfile.write("NO")
