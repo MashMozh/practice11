@@ -1,6 +1,6 @@
-with open('/Users/mashmozh/Desktop/task2.rtf', 'r', encoding='utf-8') as infile:
+with open('task2', 'r', encoding='utf-8') as infile:
     lines=infile.readlines()
-with open('/Users/mashmozh/Desktop/task22.txt', 'w', encoding='utf-8') as newfile:
+with open('task22.txt', 'w', encoding='utf-8') as newfile:
     for line in lines:
         if line.strip() and (line[0].lower() == 'a'):
-          newfile.write(line) 
+          newfile.write(line)
